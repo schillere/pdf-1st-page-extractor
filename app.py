@@ -8,7 +8,8 @@ Move the files from input to archive
 
 ES
 
-v0.1
+0.2 commented out debugging statements
+0.1 first working
 """
 
 #relative to current directory
@@ -25,7 +26,7 @@ import subprocess
 from datetime import date
 today = date.today()
 strDate = today.strftime("%Y%m%d") #YYYYMMDD format
-print("strDate =", strDate) #debugging
+#print("strDate =", strDate) #debugging
 
 
 #for file handling
@@ -33,7 +34,7 @@ import os
 
 
 strPathArchive = os.path.join(strArchiveDirectory, strDate) 
-print('strPathArchive =' + strPathArchive)     
+#print('strPathArchive =' + strPathArchive) #debugging    
 
 
 
@@ -43,15 +44,15 @@ for file in os.listdir(strInputDirectory):
         
         #filepath of PDF file in input directory
         strFilepathIn = os.path.join(strInputDirectory, file)
-        print('strFilepathIn =' + strFilepathIn) #debugging
+        #print('strFilepathIn =' + strFilepathIn) #debugging
 
         #filepath of PDF file in output directory
         strFilepathOut = os.path.join(strOutputDirectory, file)
-        print('strFilepathOut =' + strFilepathOut) #debugging
+        #print('strFilepathOut =' + strFilepathOut) #debugging
 
         #filepath for PDF file in archive directory
         strFilepathArchive = os.path.join(strPathArchive, file)
-        print('strFilepathArchive =' + strFilepathArchive)        
+        #print('strFilepathArchive =' + strFilepathArchive) #debugging     
 
 
         #PDFBox command string: "java -jar pdfbox-app-1.8.13.jar PDFSplit -endPage 1 ./test.pdf"
