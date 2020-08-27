@@ -1,6 +1,2 @@
 # ignore folder contents
-archive
-
-input
-
-output
+*.pdf
