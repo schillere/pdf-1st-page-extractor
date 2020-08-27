@@ -1,2 +1,5 @@
 # ignore folder contents
 *.pdf
+dist
+build
+__pycache__
