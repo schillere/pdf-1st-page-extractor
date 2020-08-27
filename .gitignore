@@ -1,4 +1,4 @@
-# ignore folder contents
+# files and folders to ignore
 *.pdf
 dist
 build
